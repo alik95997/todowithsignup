@@ -16,3 +16,4 @@ const signin = async (event) => {
 
 }
 signinForm.addEventListener("submit", signin)
+signinForm.addEventListener("touchstart", signin)
