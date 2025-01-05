@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="todo.css">
+    <title>Document</title>
+</head>
+
+<body onload="displayNotes()">
+    <div class="main">
+        <div class="inputContainer">
+            <div class="heading">
+                <h1 style="font-weight: 100;">ToDo List </h1>
+            </div>
+
+            <div class="inputField">
+                <input type="text" name="" id="input" placeholder="What would you like to do?">
+                <button onclick="addNote()">Add Notes</button>
+            </div>
+        </div>
+
+        <div class="notesDiv">
+            <h2>Todo List</h2>
+            <div class="notesStatus">
+                <p>List</p>
+                <p>Status</p>
+                <p>Close</p>
+            </div>
+
+            <div class="notesParent" id="notesParent">
+
+                <!-- <div class="notes">
+                <div class="notesText">
+                    <p id="textOutput">Hi</p>
+                </div>
+                <div>
+                    pending
+                <div>
+                <div class=".icons-btn">
+                    <button onclick="editNotesText()"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>

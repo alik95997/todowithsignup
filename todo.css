@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #FAF0EF;
+}
+
+.main {
+    font-size: larger;
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.inputContainer {
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #5E4988;
+}
+
+.inputContainer .inputField {
+    box-shadow: 0px 1px #8888;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 150px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    position: absolute;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffff;
+    text-align: center;
+    gap: 10px;
+}
+
+
+
+.inputContainer .inputField input {
+    text-align: left;
+    font-size: 16px;
+    width: 30%;
+    height: 30px;
+
+    /* background-color: #5E4988; */
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.inputContainer .inputField button {
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #ED6A5A;
+}
+
+
+
+.notesParent {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    gap: 2px;
+}
+
+.notes {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 70px;
+    align-items: center;
+}
+
+.notes .textOutput {
+    width: 100%;
+}
+
+.notesParent .icons-btn {
+    display: flex;
+    flex: row;
+    gap: 10px;
+
+}
+
+.pendingNotes {
+
+    border-radius: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.notesDiv {
+    border: 0px solid;
+    padding: 10px;
+    box-shadow: 0px 1px #888888;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+}
+
+.notesStatus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #F9F9F9;
+    color: #AF9088;
+}
+
+.status {
+    background-color: #9BC1BC;
+    border-radius: 10px;
+    padding: 10px;
+}
