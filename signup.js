@@ -28,3 +28,4 @@ const signup = async (event) => {
 };
 
 signupForm.addEventListener("submit", signup);
+signupForm.addEventListener("touchstart", signup);
