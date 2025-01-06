@@ -11,9 +11,8 @@ const signin = async (event) => {
         window.location.replace("./todo.html")
     } catch (error) {
         console.log(error.message)
-        
+        alert("error", error.code)
     }
 
 }
 signinForm.addEventListener("submit", signin)
-signinForm.addEventListener("touchstart", signin)
