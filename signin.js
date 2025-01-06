@@ -1,32 +1,21 @@
-import { auth, db, createUserWithEmailAndPassword, setDoc, doc } from "./firebase.js";  // Ensure correct import path
+import { auth, signInWithEmailAndPassword } from "./firebase.js";
 
-// Selecting elements
-const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const cpassword = document.querySelector("#cpassword");
-const signupForm = document.querySelector("#signupForm");
+const signinForm = document.querySelector("#signinForm");
 
-const signup = async (event) => {
-    event.preventDefault();
+const signin = async (event) => {
+    event.preventDefault(); // Prevent form from submitting the default way.
 
-
-    if (password.value !== cpassword.value) {
-        alert("Passwords do not match.");
-        return;
-    }
     try {
-        const response = await createUserWithEmailAndPassword(auth, email.value, password.value);
-        await setDoc(doc(db, "user", response.user.uid), {
-            firstName: name.value,
-            email: email.value
-        });
-        alert("account created sucessfully")
-        window.location.replace("./index.html")
+        const response = await signInWithEmailAndPassword(auth, email.value, password.value);
+        alert("Login successful!");
+        console.log("User Info:", response.user);
+        window.location.replace("./todo.html");
     } catch (error) {
-        console.error("Error:", error);
-        alert(error.code)
+        console.error("Error:", error.message); // Log a meaningful error message
+        alert(`Error: ${error.code} - ${error.message}`);
     }
 };
 
-signupForm.addEventListener("submit", signup);
+signinForm.addEventListener("submit", signin);
