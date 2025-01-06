@@ -21,6 +21,7 @@ const signup = async (event) => {
             firstName: name.value,
             email: email.value
         });
+        alert("account created successfully")
         window.location.replace("./index.html")
     } catch (error) {
         console.error("Error:", error);
