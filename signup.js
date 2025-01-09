@@ -10,7 +10,7 @@ const signupForm = document.querySelector("#signupForm");
 const authCheck = () => {
     const userUID = localStorage.getItem("uid")
     if (userUID) {
-        window.location.replace("./dashboard.html")
+        window.location.replace("./todo.html")
     }
 }
 
