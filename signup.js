@@ -7,6 +7,13 @@ const password = document.querySelector("#password");
 const cpassword = document.querySelector("#cpassword");
 const signupForm = document.querySelector("#signupForm");
 
+const authCheck = () => {
+    const userUID = localStorage.getItem("uid")
+    if (userUID) {
+        window.location.replace("./dashboard.html")
+    }
+}
+
 const signup = async (event) => {
     event.preventDefault();
 
@@ -30,3 +37,4 @@ const signup = async (event) => {
 
 signupForm.addEventListener("submit", signup);
 signupForm.addEventListener("touchstart", signup);
+window.authCheck = authCheck;
