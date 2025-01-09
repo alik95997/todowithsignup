@@ -4,6 +4,13 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const signinForm = document.querySelector("#signinForm");
 
+const authCheck = () => {
+    const userUID = localStorage.getItem("uid")
+    if (userUID) {
+        window.location.replace("./todo.html")
+    }
+}
+
 const signin = async (event) => {
     event.preventDefault(); // Prevent form from submitting the default way.
 
@@ -20,12 +27,7 @@ const signin = async (event) => {
     }
 };
 
-const authCheck = () => {
-    const userUID = localStorage.getItem("uid")
-    if (userUID) {
-        window.location.replace("./dashboard.html")
-    }
-}
+
 
 signinForm.addEventListener("submit", signin);
 window.authCheck = authCheck;
