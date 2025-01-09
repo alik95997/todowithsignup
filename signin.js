@@ -9,6 +9,8 @@ const signin = async (event) => {
 
     try {
         const response = await signInWithEmailAndPassword(auth, email.value, password.value);
+        const uid = response.user.uid;
+        localStorage.setItem("uid", uid);
         alert("Login successful!");
         console.log("User Info:", response.user);
         window.location.replace("./todo.html");
@@ -18,4 +20,12 @@ const signin = async (event) => {
     }
 };
 
+const authCheck = () => {
+    const userUID = localStorage.getItem("uid")
+    if (userUID) {
+        window.location.replace("./dashboard.html")
+    }
+}
+
 signinForm.addEventListener("submit", signin);
+window.authCheck = authCheck;
